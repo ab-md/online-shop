@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import axios from "axios";
 
 import productsAction from "../redux/products/action";
-import { BASE_URL } from "../redux/configs";
-import categoriesAction from "../redux/categories/action";
+import Layout from "./layout/Layout";
 
 const Test = () => {
 
@@ -14,39 +12,12 @@ const Test = () => {
 
     useEffect(() => {
         dispatch(productsAction());
-    }, [])
-
-    const [category, setCategory] = useState("");
-    const [sort, setSort] = useState("");
-
-    useEffect(() => {
-        axios.get(`${BASE_URL}/products/categories`)
-            .then(res => setCategory(res.data))
-            .catch(err => console.log(err))
-    }, []);
-
-    const selectCategory = event => {
-        // console.log(event.target.value);
-        setSort(event.target.value);
-        // console.log(sort);
-        dispatch(categoriesAction(event.target.value));
-    }
+    }, [dispatch])
 
     return (
-        <>
-            <select onChange={selectCategory}>
-                <option value="">{!category.length ? "loading..." : "select a category"}</option>
-                {
-                    !category.length ? <option>Loading...</option> :
-                        category.map((item, index) => (
-                            <React.Fragment key={index}>
-                                <option value={item}>{item}</option>
-                            </React.Fragment>
-                        ))
-                }
-            </select>
+        <Layout>
             {
-                ["", " ", null, undefined].includes(sort) ? products.data.map(product => (
+                !categorise.data.length ? products.data.map(product => (
                     <React.Fragment key={product.id}>
                         <p>{product.title}</p>
                     </React.Fragment>
@@ -57,7 +28,7 @@ const Test = () => {
                         </React.Fragment>
                     ))
             }
-        </>
+        </Layout>
     )
 }
 

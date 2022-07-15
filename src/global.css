@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "titillium";
+    src: url(./assets/fonts/titillium/TitilliumWeb-1eq2.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWebblack-RBLA.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWebbold-B1nd.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWebboldItalic-8xqg.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWebitalic-YvBO.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWeblight-r5ey.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWeblightItalic-M7wJ.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWebsemibold-Kv2y.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWebsemiboldItalic-2dqd.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWebthin-vjeE.ttf) format(ttf),
+        url(./assets/fonts/titillium/TitilliumWebthinItalic-ljeq.ttf) format(ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none !important;
+    font-family: 'titillium';
+}
+
+body {
+    --primary--: #D10024;
+    --secondary--: #FFF;
+    --dark--: #1E1F29;
+    --darkern--: #15161D;
+    --soft--: #2B2D42;
+    --light--: #E4E7Ed;
+}
+
+a {
+    color: var(--secondary--);
+}
+
+a:hover {
+    color: #fff;
+}

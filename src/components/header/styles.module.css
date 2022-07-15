@@ -1,0 +1,154 @@
+.header {
+    color: var(--secondary--);
+}
+
+.contactsProvider {
+    padding: 10px 0;
+    background-color: var(--dark--);
+}
+
+.contactsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts {
+    font-size: 13px;
+    display: flex;
+}
+
+.contacts i {
+    color: var(--primary--);
+    margin-right: 5px;
+}
+
+.contacts a,
+.contacts div {
+    transition: all .5s ease;
+    margin-right: 20px;
+}
+
+.contacts a:hover {
+    color: var(--primary--);
+}
+
+.userStatus {
+    margin-right: 0 !important;
+}
+
+.userStatus a {
+    margin-right: 0;
+}
+
+.brand {
+    background-color: var(--darkern--);
+    padding: 25px 0;
+}
+
+.brandContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.siteBrand {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 25%;
+}
+
+.searchFilter {
+    width: 50%;
+    text-align: center;
+}
+
+.searchFilter select,
+.searchFilter input,
+.searchFilter button {
+    height: 40px;
+}
+
+.searchFilter select {
+    border-radius: 40px 0 0 40px;
+    width: 150px;
+    text-align: center;
+    background-color: var(--secondary--);
+    border-right: 2px solid rgba(0, 0, 0, .1);
+}
+
+.searchFilter input {
+    width: 300px;
+    padding-left: 20px;
+}
+
+.searchFilter input::placeholder {
+    opacity: .5;
+}
+
+.searchFilter button {
+    border-radius: 0 40px 40px 0;
+    width: 100px;
+    background-color: var(--primary--);
+    color: var(--secondary--);
+    font-weight: bold;
+}
+
+.brand .cart {
+    width: 25%;
+    text-align: right;
+    padding-right: 14px;
+}
+
+.brand .cart a {
+    margin-left: 20px;
+}
+
+.shoppingCart {
+    position: relative;
+}
+
+.shoppingCart .qty {
+    background-color: var(--primary--);
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -12px;
+    right: 0;
+    left: 20px;
+    text-align: center;
+}
+
+.navbar {
+    border-top: 3px solid var(--primary--);
+    padding: 20px 0;
+    border-bottom: 2px solid var(--light--);
+}
+
+.navbar ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+}
+
+.navbar ul li:not(.navbar ul li:first-child) {
+    margin-left: 30px;
+}
+
+.navbar a {
+    color: var(--soft--);
+    padding-bottom: 5px;
+    transition: .2s ease;
+}
+
+.navbar a:hover {
+    color: var(--primary--);
+    border-bottom: 2px solid var(--primary--);
+}
+
+.active {
+    color: var(--primary--) !important;
+    border-bottom: 2px solid var(--primary--);
+}
