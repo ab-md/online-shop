@@ -1,0 +1,154 @@
+.socialProvider {
+    border-bottom: 3px solid var(--primary--);
+    border-top: 2px solid var(--light--);
+}
+
+.socialProvider div,
+.socialProvider form {
+    padding: 15px 0;
+}
+
+.socialContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialContainer a {
+    color: #333;
+}
+
+.socialForm {
+    position: relative;
+}
+
+.socialForm input {
+    border: 1px solid var(--light--);
+    border-radius: 40px 0 0 40px;
+    width: 350px;
+    padding: 8px 20px;
+}
+
+.socialForm button {
+    border: 1px solid var(--primary--);
+    border-radius: 0 40px 40px 0;
+    background-color: var(--primary--);
+    color: var(--secondary--);
+    width: 200px;
+    padding: 8px 0;
+}
+
+.socialForm i {
+    margin-right: 5px;
+}
+
+.socialForm::after {
+    content: "\f003";
+    font-family: FontAwesome;
+    color: var(--light--);
+    font-size: 10rem;
+    position: absolute;
+    top: -90px;
+    left: -90px;
+    transform: rotate(15deg);
+    z-index: -1;
+}
+
+.socialIcons {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--light--);
+    background-color: var(--secondary--);
+    transition: all .4s ease;
+    margin: 0 10px;
+}
+
+.iconContainer:hover {
+    background-color: var(--light--);
+    color: var(--primary--);
+}
+
+.accessesProvider {
+    background-color: var(--darkern--);
+    color: #B9BABC;
+    padding: 50px;
+}
+
+.accessesProvider a {
+    color: #B9BABC;
+}
+
+.accessesProvider .title {
+    color: var(--secondary--);
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.accessesProvider .text {
+    text-align: justify;
+    margin-bottom: 20px;
+    /* width: 90% */
+}
+
+.accesses {
+    display: flex;
+    flex-direction: column;
+}
+
+.accesses a {
+    transition: .5s ease;
+}
+
+.accesses a:not(.accesses a:last-child) {
+    margin-bottom: 15px;
+}
+
+.accesses a:hover {
+    color: var(--primary--);
+}
+
+.accesses i {
+    color: var(--primary--);
+    margin-right: 15px;
+}
+
+.copyright {
+    background-color: var(--dark--);
+    padding: 30px 0 ;
+}
+
+
+.credits {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.credits i {
+    font-size: 2.5rem;
+    color: var(--darkern--);
+    margin: 0 10px;
+}
+
+.copyright .text {
+    text-align: center;
+    color: var(--light--);
+}
+
+.copyright .text a {
+    color: var(--soft--);
+}
+
+.copyright .text a:hover {
+    color: var(--primary--);
+}

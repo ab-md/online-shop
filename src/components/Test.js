@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
+import { Container } from "react-bootstrap";
 
 import productsAction from "../redux/products/action";
 import Layout from "./layout/Layout";
@@ -16,18 +17,20 @@ const Test = () => {
 
     return (
         <Layout>
-            {
-                !categorise.data.length ? products.data.map(product => (
-                    <React.Fragment key={product.id}>
-                        <p>{product.title}</p>
-                    </React.Fragment>
-                )) :
-                    categorise.data.map(product => (
+            <Container>
+                {
+                    !categorise.data.length ? products.data.map(product => (
                         <React.Fragment key={product.id}>
                             <p>{product.title}</p>
                         </React.Fragment>
-                    ))
-            }
+                    )) :
+                        categorise.data.map(product => (
+                            <React.Fragment key={product.id}>
+                                <p>{product.title}</p>
+                            </React.Fragment>
+                        ))
+                }
+            </Container>
         </Layout>
     )
 }

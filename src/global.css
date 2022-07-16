@@ -13,7 +13,7 @@
         url(./assets/fonts/titillium/TitilliumWebthinItalic-ljeq.ttf) format(ttf);
 }
 
-* {
+*:not(i) {
     padding: 0;
     margin: 0;
     box-sizing: border-box;

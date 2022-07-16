@@ -125,6 +125,7 @@
     border-top: 3px solid var(--primary--);
     padding: 20px 0;
     border-bottom: 2px solid var(--light--);
+    font-size: 1.2rem;
 }
 
 .navbar ul {
