@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import { Col } from "react-bootstrap";
 
 import styles from "./styles.module.css";
-import image from "../../../assets/images/pngwing.com.png";
 
-const CategoryCard = () => {
+const CategoryCard = ({data}) => {
+    
     return (
         <Col xs={4}>
             <div className={styles.container}>
-                <img src={image} alt="category" />
+                <img src={data.image} alt={data} />
                 <div className={styles.text}>
-                    <p className={styles.title}>Laptop collection</p>
-                    <Link to="#">
+                    <p className={styles.title}>{data.name.toUpperCase()} COLLECTION</p>
+                    <Link to={`/products/${data.name}`}>
                         SHOP NOW
                         <i className="fa-solid fa-circle-arrow-right"></i>
                     </Link>
