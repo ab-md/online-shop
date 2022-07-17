@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
 import styles from "./styles.module.css";
-import { BASE_URL } from "../../redux/configs";
+import { BASE_URL } from "../../../redux/configs";
 
 const Accesses = () => {
 

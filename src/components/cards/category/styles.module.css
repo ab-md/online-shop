@@ -1,0 +1,56 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 10px;
+    background-color: var(--light--);
+}
+
+.container:hover img {
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+
+/* .image {
+    position: relative;
+} */
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -11px;
+    left: 0;
+    width: 60%;
+    background: var(--primary--);
+    opacity: 0.9;
+    transform: skewX(-45deg);
+    z-index: 10;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -10px;
+    left: 1px;
+    width: 100%;
+    background: var(--primary--);
+    opacity: 0.9;
+    transform: skewX(-45deg) translateX(-100%);
+}
+
+.container img {
+    width: 100%;
+}
+
+.container .text {
+    color: var(--secondary--);
+    position: absolute;
+    top: 0;
+    padding: 30px;
+    z-index: 10;
+}
+
+.text a, .text p {
+    z-index: 10;
+}

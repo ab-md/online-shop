@@ -4,9 +4,9 @@ import { useDispatch } from "react-redux/es/exports";
 import { Container } from 'react-bootstrap';
 import axios from "axios";
 
-import { BASE_URL } from "../../redux/configs";
+import { BASE_URL } from "../../../redux/configs";
 import styles from "./styles.module.css";
-import categoriesAction from "../../redux/categories/action";
+import categoriesAction from "../../../redux/categories/action";
 
 const Brand = () => {
 

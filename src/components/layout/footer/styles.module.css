@@ -91,7 +91,7 @@
 .accessesProvider .title {
     color: var(--secondary--);
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 1.5rem;
 }
 
