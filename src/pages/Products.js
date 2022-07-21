@@ -16,6 +16,7 @@ const Products = () => {
 
     const dispath = useDispatch();
     const products = useSelector(state => state.products);
+    const category = useSelector(state => state.categories);
 
     useEffect(() => {
         dispath(productsAction());
@@ -42,6 +43,7 @@ const Products = () => {
             <Container>
                 <Row>
                     {
+                        category.data.length ? category.data.map((item, index) => <ProductCard key={index} data={item} />) :
                         products.data.map((product, index) => <ProductCard key={index} data={product} />)
                     }
                 </Row>

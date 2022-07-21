@@ -9,7 +9,13 @@ const qtyCount = (item, id) => {
     return item[index].qty;
 }
 
+const shorten = (item) => {
+    const splited = item.split(" ");
+    return `${splited[0]} ${splited[1]}`;
+}
+
 export {
     isInCart,
     qtyCount,
+    shorten,
 }

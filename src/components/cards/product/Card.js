@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 
 import { addToCart, decrease, increase, deleteItem } from "../../../redux/cart/action";
-import { isInCart, qtyCount } from "../../../servives";
+import { isInCart, qtyCount, shorten } from "../../../servives";
 import styles from "./styles.module.css";
 
 const ProductCard = ({ data }) => {
@@ -36,7 +37,7 @@ const ProductCard = ({ data }) => {
 
                 <div className={styles.body}>
                     <p className={styles.category}>{data.category.toUpperCase()}</p>
-                    <p className={styles.product}>{data.title.toUpperCase()}</p>
+                    <p className={styles.product}>{shorten(data.title.toUpperCase())}</p>
                     <p className={styles.price}>${data.price}</p>
                 </div>
 
@@ -49,7 +50,9 @@ const ProductCard = ({ data }) => {
                         placement="top" overlay={
                             <Tooltip>details</Tooltip>
                         }>
-                        <i className="fa-solid fa-eye"></i>
+                        <Link to={`/products/${data.id}`}>
+                            <i className="fa-solid fa-eye"></i>
+                        </Link>
                     </OverlayTrigger>
                     <OverlayTrigger
                         placement="top" overlay={
@@ -60,19 +63,25 @@ const ProductCard = ({ data }) => {
                 </div>
 
                 <div className={styles.cart}>
-                        {
-                            isInCart(cart, data.id) ? <button onClick={() => add(data.id)}>+</button> : 
+                    {
+                        qtyCount(cart, data.id) === 1 && <button onClick={() => deleteFromCart(data.id)}>
+                            <i className="fa-regular fa-trash-can"></i>
+                        </button>
+                    }
+                    {
+                        qtyCount(cart, data.id) > 1 && <button onClick={() => remove(data.id)}>
+                            <i className="fa-solid fa-minus"></i>
+                        </button>
+                    }
+                    {
+                        isInCart(cart, data.id) ? <button onClick={() => add(data.id)}>
+                            <i className="fa-solid fa-plus"></i>
+                        </button> :
                             <button className={styles.addToCart} onClick={() => buy(data)}>
                                 <i className={`fa-solid fa-cart-shopping ${styles.cartIcon}`}></i>
                                 ADD TO CART
                             </button>
-                        }
-                        {
-                            qtyCount(cart, data.id) === 1 && <button onClick={() => deleteFromCart(data.id)}>trash</button> 
-                        }
-                        {
-                            qtyCount(cart, data.id) > 1 && <button onClick={() => remove(data.id)}>-</button> 
-                        }
+                    }
                 </div>
             </div>
         </Col>
