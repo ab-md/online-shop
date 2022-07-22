@@ -4,7 +4,7 @@ import { Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 
 import { addToCart, decrease, increase, deleteItem } from "../../../redux/cart/action";
-import { isInCart, qtyCount, shorten } from "../../../servives";
+import { isInCart, myToast, qtyCount, shorten } from "../../../helpers";
 import styles from "./styles.module.css";
 
 const ProductCard = ({ data }) => {
@@ -14,22 +14,26 @@ const ProductCard = ({ data }) => {
 
     const buy = (product) => {
         dispatch(addToCart(product));
+        myToast("success", "Item added to cart");
     }
 
     const add = (productId) => {
         dispatch(increase(productId));
+        myToast("success", "Item increased");
     }
 
     const remove = (productId) => {
         dispatch(decrease(productId));
+        myToast("success", "Item decreased");
     }
 
     const deleteFromCart = (productId) => {
         dispatch(deleteItem(productId));
+        myToast("warning", "Item deleted from cart");
     }
 
     return (
-        <Col xs={3}>
+        <Col xs={3} style={{ paddingRight: "0", paddingLeft: "0" }}>
             <div className={styles.container}>
                 <div className={styles.image}>
                     <img src={data.image} alt="product" />

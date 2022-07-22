@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux/es/exports";
+import { useDispatch, useSelector } from "react-redux/es/exports";
 import { Container } from 'react-bootstrap';
 import axios from "axios";
 
@@ -11,6 +11,7 @@ import categoriesAction from "../../../redux/categories/action";
 const Brand = () => {
 
     const dispatch = useDispatch();
+    const { itemsCounter } = useSelector(state => state.cart);
 
     const [categories, setCategories] = useState([]);
     const [category, setCategory] = useState("");
@@ -52,7 +53,7 @@ const Brand = () => {
                     </Link>
                     <Link to="/cart" className={styles.shoppingCart}>
                         <i className="fa-solid fa-cart-shopping"></i>
-                        <div className={styles.qty}>3</div>
+                        <div className={styles.qty}>{itemsCounter}</div>
                     </Link>
                 </div>
             </Container>

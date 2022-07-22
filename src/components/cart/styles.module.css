@@ -20,11 +20,30 @@
 
 .items,
 .payInfo {
-    /* border: 2px solid var(--light--); */
     background-color: var(--secondary--);
     border-radius: 5px;
     padding: 5px 10px;
     box-shadow: 1px 1px 7px var(--soft--);
+}
+
+.price span:last-child, 
+.buttons .clearCart {
+    color: rgba(209, 0, 36, .7);
+}
+
+.items .buttons button {
+    background-color: var(--soft--);
+    color: var(--secondary--);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.items .buttons .qty {
+    padding: 2px 5px;
+    background-color: var(--primary--);
+    border-radius: 5px;
+    margin: 0 3px;
+    color: var(--secondary--);
 }
 
 .payInfo {
@@ -50,4 +69,57 @@
     padding: 3px 8px;
     color: var(--secondary--);
     border-radius: 5px;
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empty i:not(.cartIcon) {
+    font-size: 16rem;
+}
+
+.empty .cta {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.empty a {
+    background-color: transparent;
+    border: 2px solid var(--light--);
+    padding: 5px 25px;
+    color: var(--dark--);
+    position: relative;
+    transition: .3s ease;
+    display: inline-block;
+}
+
+.empty a:hover {
+    background-color: var(--light--);
+    border-color: var(--light--);
+    color: var(--dark--);
+    padding-left: 50px;
+}
+
+.empty a .cartIcon {
+    padding: 0 10px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 38px
+}
+
+.empty a:hover .cartIcon {
+    visibility: visible;
+    opacity: 1;
 }

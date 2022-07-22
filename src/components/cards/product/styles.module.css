@@ -40,6 +40,7 @@
 
 .view i {
     margin: 0 10px;
+    color: #212529;
 }
 
 .cart {
@@ -65,11 +66,18 @@
     transition: .3s ease;
 }
 
+.cart .addToCart:hover {
+    padding-left: 50px;
+}
+
+.cart button {
+    margin: 0 5px;
+}
+
 .cart button:hover {
     background-color: var(--secondary--);
     border-color: var(--primary--);
     color: var(--primary--);
-    padding-left: 50px;
 }
 
 .cart .cartIcon {
@@ -84,7 +92,7 @@
     line-height: 38px
 }
 
-.cart button:hover .cartIcon {
+.cart .addToCart:hover .cartIcon {
     visibility: visible;
     opacity: 1;
 }

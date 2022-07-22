@@ -6,9 +6,7 @@ import SingleProduct from '../components/product/Single';
 const Product = () => {
     return (
         <Layout>
-            <Container>
-                <SingleProduct />
-            </Container>
+            <SingleProduct />
         </Layout>
     );
 }

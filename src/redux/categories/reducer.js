@@ -3,7 +3,7 @@ import { GET_CATEGORIES_FAIL, GET_CATEGORIES_REQUEST, GET_CATEGORIES_SUCCESS } f
 const initialState = {
     loading: false,
     data: [],
-    error: ""
+    error: {}
 }
 
 const categoriesReducer = (state = initialState, action) => {
@@ -12,7 +12,7 @@ const categoriesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: true,
-                error: ""
+                error: {}
             }
 
         case GET_CATEGORIES_SUCCESS :

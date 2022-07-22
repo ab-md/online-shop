@@ -11,11 +11,6 @@ const categoriesAction = (category) => async (dispatch) => {
     } catch (error) {
         dispatch({type: GET_CATEGORIES_FAIL, payload: error});
     }
-    // dispatch({type: GET_CATEGORIES_REQUEST});
-
-    // axios.get(`${BASE_URL}/products/category/${category}`)
-    //     .then(response => dispatch({type: GET_CATEGORIES_SUCCESS, payload: response.data}))
-    //     .catch(error => dispatch({type: GET_CATEGORIES_FAIL, payload: error}))
 }
 
 export default categoriesAction;

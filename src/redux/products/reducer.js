@@ -3,7 +3,7 @@ import { GET_PRODUCTS_FAIL, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS } from ".
 const initialState = {
     loading: false,
     data: [],
-    error: ""
+    error: {}
 }
 
 const productsReducer = (state = initialState, action) => {
@@ -12,7 +12,7 @@ const productsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: true,
-                error: ""
+                error: {}
             }
 
         case GET_PRODUCTS_SUCCESS:

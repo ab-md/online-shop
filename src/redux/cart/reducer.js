@@ -1,4 +1,4 @@
-const { ADD_TO_CART, INCREASE, DECREASE, DELETE, CLEAR_CART } = require("../actionTypes");
+const { ADD_TO_CART, INCREASE, DECREASE, DELETE, CLEAR_CART, CHECK_OUT } = require("../actionTypes");
 
 const initialState = {
     cart: [],
@@ -56,10 +56,20 @@ const cartReducer = (state = initialState, action) => {
                 ...counter(state.cart)
             }
 
+        case CHECK_OUT:
+            return {
+                cart: [],
+                itemsCounter: 0,
+                total: 0,
+                checkout: true
+            }
+
         case CLEAR_CART:
             return {
-                ...state,
-                cart: []
+                cart: [],
+                itemsCounter: 0,
+                total: 0,
+                checkout: false
             }
 
         default:
