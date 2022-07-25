@@ -2,6 +2,56 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Perview
+### home page
+
+<div align="center">
+  <img src="https://github.com/ab-md/online-shop/blob/main/screen%20shots/home%20page.png?raw=true" alt="home"/>
+</div>
+
+### footer of site
+
+<div align="center">
+  <img src="https://github.com/ab-md/online-shop/blob/main/screen%20shots/footer.png?raw=true" alt="home"/>
+</div>
+
+### products Page
+
+<div align="center">
+  <img src="https://github.com/ab-md/online-shop/blob/main/screen%20shots/products%20page.png?raw=true" alt="home"/>
+</div>
+
+### products
+
+<div align="center">
+  <img src="https://github.com/ab-md/online-shop/blob/main/screen%20shots/products.png?raw=true" alt="home"/>
+</div>
+
+### product add to cart
+
+<div align="center">
+  <img src="https://github.com/ab-md/online-shop/blob/main/screen%20shots/products-addtocart.png?raw=true" alt="home"/>
+</div>
+
+### single product page
+
+<div align="center">
+  <img src="https://github.com/ab-md/online-shop/blob/main/screen%20shots/single-product.png?raw=true" alt="home"/>
+</div>
+
+### single product add to cart
+
+<div align="center">
+  <img src="https://github.com/ab-md/online-shop/blob/main/screen%20shots/single-addtocart.png?raw=true" alt="home"/>
+</div>
+
+### cart page
+
+<div align="center">
+  <img src="https://github.com/ab-md/online-shop/blob/main/screen%20shots/cart.png?raw=true" alt="home"/>
+</div>
+
+
 ## Available Scripts
 
 In the project directory, you can run:
