@@ -4,6 +4,11 @@
     border-radius: 15px;
 }
 
+/* .image {
+    display: flex;
+    align-items: center;
+} */
+
 .image img {
     width: 100%;
     padding: 10px 40px 10px 20px;
@@ -18,14 +23,19 @@
 
 .title {
     color: var(--secondary--);
+    font-size: 2rem;
 }
 
 .price {
     color: rgba(209, 0, 36, .8);
+    margin: 10px 0;
+    font-size: 1.5rem;
 }
 
 .text {
     color: var(--light--);
+    text-align: justify;
+    padding-right: 30px;
 }
 
 .rating {

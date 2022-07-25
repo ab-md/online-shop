@@ -28,6 +28,21 @@
     width: 100%;
 }
 
+.category {
+    color: var(--lightern--);
+    font-size: 13px;
+}
+
+.product {
+    font-weight: bold;
+}
+
+.price {
+    color: var(--primary--);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 .rating {
     display: flex;
     justify-content: center;
@@ -95,4 +110,9 @@
 .cart .addToCart:hover .cartIcon {
     visibility: visible;
     opacity: 1;
+}
+
+.cart .qty {
+    padding: 0 5px;
+    color: var(--secondary--);
 }

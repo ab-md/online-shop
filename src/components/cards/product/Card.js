@@ -77,6 +77,7 @@ const ProductCard = ({ data }) => {
                             <i className="fa-solid fa-minus"></i>
                         </button>
                     }
+                    <span className={styles.qty}>{qtyCount(cart, data.id)}</span>
                     {
                         isInCart(cart, data.id) ? <button onClick={() => add(data.id)}>
                             <i className="fa-solid fa-plus"></i>

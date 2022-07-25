@@ -34,8 +34,8 @@ const Category = () => {
                                 <img src={loading} alt="loader" />
                             </div> : 
                             categories.error?.message?.length ? errorHandler() :
-                            categories.data.map((category, index) => (
-                                <ProductCard key={index} data={category} />
+                            categories.data.map((item, index) => (
+                                <ProductCard key={index} data={item} />
                             ))
                     }
                 </Row>

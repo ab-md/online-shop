@@ -5,8 +5,7 @@ import { BASE_URL } from "../configs";
 const categoriesAction = (category) => async (dispatch) => {
     try {
         dispatch({type: GET_CATEGORIES_REQUEST});
-        const dependenci = await category;
-        const response = await axios.get(`${BASE_URL}/products/category/${dependenci}`);
+        const response = await axios.get(`${BASE_URL}/products/category/${category}`);
         dispatch({type: GET_CATEGORIES_SUCCESS, payload: response.data});
     } catch (error) {
         dispatch({type: GET_CATEGORIES_FAIL, payload: error});
