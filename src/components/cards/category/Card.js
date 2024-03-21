@@ -26,7 +26,7 @@ const CategoryCard = () => {
             <Row>
                 {
                     categories.map(category => (
-                        <Col xs={3} key={category.id} style={{paddingRight: "0", paddingLeft: "0"}}>
+                        <Col xs={12} md={6} lg={4} xl={3} key={category.id} style={{paddingRight: "0", paddingLeft: "0"}}>
                             <div className={styles.container}>
                                 <img src={category.image} alt={category.name} />
                                 <div className={styles.text}>

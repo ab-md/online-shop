@@ -25,7 +25,7 @@ const Products = () => {
 
     return (
         <Layout>
-            <CategoryCard />
+            {/* <CategoryCard /> */}
             <Container>
                 <Row>
                     {

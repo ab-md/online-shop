@@ -57,13 +57,13 @@ const SingleProduct = () => {
                     </div> :
                     product.error?.message?.length ? errorHandler() :
                         <Row className={styles.container}>
-                            <Col xs={6}>
+                            <Col lg={6}>
                                 <div className={styles.image}>
                                     <img src={image} alt="product" />
                                 </div>
                             </Col>
 
-                            <Col xs={6} className={styles.textContainer}>
+                            <Col lg={6} className={styles.textContainer}>
                                 <div className={styles.body}>
                                     <p className={styles.title}>{title}</p>
                                     <p className={styles.price}>${price}</p>

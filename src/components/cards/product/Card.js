@@ -33,7 +33,7 @@ const ProductCard = ({ data }) => {
     }
 
     return (
-        <Col xs={3} style={{ paddingRight: "0", paddingLeft: "0" }}>
+        <Col xs={12} md={6} lg={4} xl={3} style={{ paddingRight: "0", paddingLeft: "0" }}>
             <div className={styles.container}>
                 <div className={styles.image}>
                     <img src={data.image} alt="product" />

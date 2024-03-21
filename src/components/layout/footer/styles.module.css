@@ -29,12 +29,13 @@
 
 .socialForm {
     position: relative;
+    width: 500px;
 }
 
 .socialForm input {
     border: 1px solid var(--light--);
     border-radius: 40px 0 0 40px;
-    width: 350px;
+    width: calc(100% - 160px);
     padding: 8px 20px;
 }
 
@@ -43,7 +44,7 @@
     border-radius: 0 40px 40px 0;
     background-color: var(--primary--);
     color: var(--secondary--);
-    width: 200px;
+    width: 160px;
     padding: 8px 0;
 }
 
@@ -158,4 +159,28 @@
 
 .copyright .text a:hover {
     color: var(--primary--);
+}
+
+@media only screen and (max-width: 768px) {
+
+    .accessesProvider .access .title:not(.accessesProvider .access:first-child .title) {
+        margin-top: 60px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .accessesProvider .access:nth-child(3), .accessesProvider .access:nth-child(4) {
+        margin-top: 60px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .accessesProvider .access:last-child .title {
+        margin-top: 60px;
+    }
+
 }

@@ -9,11 +9,12 @@ import { BASE_URL } from "../../../redux/configs";
 const Accesses = () => {
 
     const [categories, setCategories] = useState([]);
+    const [err, setErr] = useState();
 
     useEffect(() => {
         axios.get(`${BASE_URL}/products/categories`)
             .then(res => setCategories(res.data))
-            .catch(err => console.log(err))
+            .catch(err => setErr(err))
     }, [])
 
     const lists = [
@@ -26,7 +27,7 @@ const Accesses = () => {
                 { id: 3, name: "1734 Stonecoal Road", link: "#", icon: <i className="fa-solid fa-location-dot"></i> },
             ]
         },
-        { id: 2, title: "categories", list: categories.map((category, index) => { return { id: index, name: category, link: category } }) },
+        { id: 2, title: "categories", list: err ? "Error in recieving categories list!" : categories.map((category, index) => { return { id: index, name: category, link: category } }) },
         {
             id: 3, title: "information", list: [
                 { id: 1, name: "About Us", link: "/about" },
@@ -53,16 +54,20 @@ const Accesses = () => {
                 <Row>
                     {
                         lists.map(list => (
-                            <Col key={list.id}>
+                            <Col className={styles.access} xs={12} md={6} lg={4} xl={3} key={list.id}>
                                 <p className={styles.title}>{list.title.toUpperCase()}</p>
                                 {list?.text && <p className={styles.text}>{list.text}</p>}
                                 <div className={styles.accesses}>
-                                    {list.list.map(item => (
-                                        <Link to={item.link} key={item.id}>
-                                            {item?.icon && item?.icon}
-                                            {item.name}
-                                        </Link>
-                                    ))}
+                                    {
+                                        typeof list.list === "object" ?
+                                            list.list.map(item => (
+                                                <Link to={item.link} key={item.id}>
+                                                    {item?.icon && item?.icon}
+                                                    {item.name}
+                                                </Link>
+                                            )) :
+                                            list.list
+                                    }
                                 </div>
                             </Col>
                         ))

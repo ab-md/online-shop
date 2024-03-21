@@ -54,7 +54,7 @@ const CartComponent = () => {
                         </div>
                         :
                         <>
-                            <Col xs={9}>
+                            <Col xs={12} md={9}>
                                 <div>
                                     {
                                         cart.map(product => (
@@ -106,7 +106,7 @@ const CartComponent = () => {
                                     }
                                 </div>
                             </Col>
-                            <Col xs={3}>
+                            <Col xs={12} md={3}>
                                 <div className={styles.payInfo}>
                                     <p className={styles.totalItems}>Total Items: {itemsCounter}</p>
                                     <p className={styles.payment}>Total Payment: {total}</p>

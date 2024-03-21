@@ -105,3 +105,11 @@
     border: 1px solid var(--light--);
     cursor: pointer;
 }
+
+@media only screen and (max-width: 992px) {
+
+    .cart {
+        margin-top: 40px;
+    }
+
+}

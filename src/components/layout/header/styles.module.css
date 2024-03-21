@@ -45,20 +45,12 @@
     padding: 25px 0;
 }
 
-.brandContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .siteBrand {
     font-size: 2rem;
     font-weight: bold;
-    width: 25%;
 }
 
 .searchFilter {
-    width: 50%;
     text-align: center;
 }
 
@@ -70,14 +62,14 @@
 
 .searchFilter select {
     border-radius: 40px 0 0 40px;
-    width: 150px;
     text-align: center;
     background-color: var(--secondary--);
     border-right: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 10px;
 }
 
 .searchFilter input {
-    width: 300px;
+    width: calc(100% - 260px);
     padding-left: 20px;
 }
 
@@ -94,9 +86,10 @@
 }
 
 .brand .cart {
-    width: 25%;
     text-align: right;
     padding-right: 14px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .brand .cart a {
@@ -126,12 +119,14 @@
     padding: 20px 0;
     border-bottom: 2px solid var(--light--);
     font-size: 1.2rem;
+    position: relative;
 }
 
 .navbar ul {
     margin-bottom: 0;
     padding-left: 0;
     display: flex;
+    transition: all .3s ease;
 }
 
 .navbar ul li:not(.navbar ul li:first-child) {
@@ -152,4 +147,60 @@
 .active {
     color: var(--primary--) !important;
     border-bottom: 2px solid var(--primary--);
+}
+
+.toggleContainer {
+    display: none;
+}
+
+.toggleContainer span {
+    color: #000;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .contactsContainer {
+        flex-direction: column;
+    }
+
+    .contacts {
+        margin-bottom: 10px;
+    }
+
+    .toggleContainer {
+        display: flex;
+        justify-content: center;
+        /* position: absolute; */
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar ul li {
+        padding: 15px 20px;
+        margin-left: 30px;
+    }
+
+    ul.activeNav {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        transition: all .3s ease;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .searchFilter {
+        margin: 20px 0;
+    }
+
+    .siteBrand {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
 }

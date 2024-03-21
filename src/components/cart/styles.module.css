@@ -20,6 +20,7 @@
 
 .items,
 .payInfo {
+    margin-top: 30px;
     background-color: var(--secondary--);
     border-radius: 5px;
     padding: 5px 10px;
@@ -84,10 +85,7 @@
 
 .empty .cta {
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
+    text-align: center;
 }
 
 .empty a {
